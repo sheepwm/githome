@@ -1,0 +1,13 @@
+# linux下git与网站连接的步骤
+1. ssh-keygen -t rsa -C "committer_email@committermail.com"
+2. 连续按空格
+3. 将id_rsa.pub中的公钥内容添加到github网站的ssh中
+
+SSH生成id_rsa, id_rsa.pub后，连接服务器却报：
+Agent admitted failure to sign using the key
+错误。
+
+解决方法：
+在当前用户下执行命令：
+ssh-add
+即可解决。
